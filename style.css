@@ -27,8 +27,9 @@ ul{
 
 .btn-1{
     height: 38px;
-    background-color: #000;
-    margin: 0;
+    width: 263px;
+    background-color: #7f96ff;
+    margin: 12px;
     padding: 0 20px;
     color: #f7f7ff;
     border-radius: 5px;
@@ -56,10 +57,10 @@ ul{
 
 header{
     background-color: #f7f7ff;
-    color: #000;
+    color: #054a91;
     /* min height */
     min-height: 70px;
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #054a91;
     padding: 5px 0;
 }
 
@@ -81,13 +82,13 @@ header li{
 
 header a{
     font-size: 18px;
-    color: #000;
+    color: #054a91;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 #highlight, #current a {
-    color: #ffa1c8;
+    color: #7f96ff;
     font-weight: 800;
 }
     
@@ -114,26 +115,6 @@ header a{
 #showcase p{
     font-size: 20px;
 } 
-
-/* Newsletter */
-
-#newsletter {
-    background-color: #ffa1c8;
-    padding: 15px;
-    color: #f7f7ff;
-}
-
-#newsletter > .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#newsletter input{
-    padding: 4px;
-    height: 25px;
-    width: 250px;
-}
 
 /* boxes  */
 #boxes{
@@ -169,7 +150,7 @@ i{
 
 /* About */
 .about {
-    background-color: #ffa1c8;
+    background-color: #054a91;
     padding: 20px;
 }
 
@@ -196,17 +177,38 @@ i{
 }
 
 .services li {
-    border: 1px solid #000;
+    border: 1px solid #054a91;
     padding: 20px;
     margin-bottom: 20px;
     background-color: #f7f7ff;
     border-radius: 20px;
 }
+/* Newsletter */
+
+#newsletter {
+    background-color: #054a91;
+    padding: 15px;
+    color: #f7f7ff;
+    font-size: 25px;
+}
+
+#newsletter > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#newsletter input{
+    margin: 10px;
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
 
 /* footer */
 footer{
     background-color: #f7f7ff;
-    color: #000;
+    color: #054a91;
     text-align: center;
 }
 
@@ -217,7 +219,7 @@ footer h2{
 }
 
 footer i{
-    color: #000;
+    color: #054a91;
     font-size: 70px;
     padding: 20px;
     text-decoration: none;
