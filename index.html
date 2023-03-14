@@ -18,21 +18,21 @@
     <header>
       <div class="container">
         <div id="branding">
-          <h1>Will Fant</h1>
+          <h1 data-value="Will Fant">Will Fant</h1>
         </div>
         <nav>
           <ul>
             <li id="current">
-              <a href="index.html">Home</a>
+              <a data-value="HOME" href="index.html">Home</a>
             </li>
             <li>
-              <a href="about.html">About</a>
+              <a data-value="ABOUT" href="about.html">About</a>
             </li>
             <li>
-              <a href="projects.html">Projects</a>
+              <a data-value="PROJECTS" href="projects.html">Projects</a>
             </li>
             <li>
-              <a href="resume.html">Resume</a>
+              <a data-value="RESUME" href="resume.html">Resume</a>
             </li>
           </ul>
         </nav>
@@ -45,8 +45,12 @@
         <h1>What's up?</h1>
         <p>
           I'm Will Fant, a 17-year-old "jack of all trades". I love solving
-          problems, whether it's fixing cars, computers, or code. I'm also a talented salesman and content creator. Outside of work, I enjoy
-          hanging out with friends and participating in school sports and clubs. As a content creator, I love experimenting with different types of content and platforms. Overall, I'm a curious and enthusiastic individual who is always eager to learn and grow.
+          problems, whether it's fixing cars, computers, or code. I'm also a
+          talented salesman and content creator. Outside of work, I enjoy
+          hanging out with friends and participating in school sports and clubs.
+          As a content creator, I love experimenting with different types of
+          content and platforms. Overall, I'm a curious and enthusiastic
+          individual who is always eager to learn and grow.
         </p>
       </div>
     </section>
@@ -143,14 +147,14 @@
             title="Number"
             placeholder="Enter Phone Number"
           />
-          <br>
+          <br />
           <input
-          type="email"
-          name="email"
-          title="Email"
-          placeholder="Enter Email"
-        />
-        <br>
+            type="email"
+            name="email"
+            title="Email"
+            placeholder="Enter Email"
+          />
+          <br />
           <button class="btn-1">Send</button>
         </form>
       </div>
@@ -176,5 +180,35 @@
         </a>
       </div>
     </footer>
+    <script>
+      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+
+      let interval = null;
+
+      document.querySelector("h1").onmouseover = (event) => {
+        let iteration = 0;
+
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+          event.target.innerText = event.target.innerText
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return event.target.dataset.value[index];
+              }
+
+              return letters[Math.floor(Math.random() * 62)];
+            })
+            .join("");
+
+          if (iteration >= event.target.dataset.value.length) {
+            clearInterval(interval);
+          }
+
+          iteration += 1 / 5;
+        }, 25);
+      };
+    </script>
   </body>
 </html>
