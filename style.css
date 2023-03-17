@@ -129,6 +129,9 @@ header a:hover {
 /* boxes  */
 #boxes {
   margin-top: 20px;
+  color: #f7f7ff;
+  text-align: center;
+  font-size: 30px;
 }
 
 #boxes > .container {
@@ -140,6 +143,7 @@ header a:hover {
   width: 20%;
   text-align: center;
   padding: 10px;
+  font-size: 25px;
 }
 
 i {
@@ -156,6 +160,14 @@ i {
 
 .fa-js {
   color: #f3df50;
+}
+
+.fa-java {
+  color: 	#f89820;
+}
+
+.fa-python {
+  color:  #FFE873;
 }
 
 /* About */
@@ -216,7 +228,8 @@ i {
 }
 
 /* Projects */
-.portfolio h1 {
+
+.mainpart h1 {
   font-size: 50px;
   text-align: center;
   font-weight: bold;
@@ -247,8 +260,7 @@ i {
 
 .project-card video:hover{
     width: 100%;
-    text-align: center;
-    height: 400px;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -288,6 +300,64 @@ i {
   margin: 30px;
 }
 
+.projects{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+
+.projects h1{
+  width: 100%;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #f7f7ff;
+  margin: 50px 0 100px;
+}
+
+.hproject-card {
+  background-color: #f7f7ff;
+  width: 40%;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.hproject-card p{
+  text-decoration: none;
+  color: #054a91;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 30px;
+}
+
+.hproject-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hproject-card img:hover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hproject-card video {
+  width: 100%;
+  text-align: center;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hproject-card video:hover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* footer */
 footer {
