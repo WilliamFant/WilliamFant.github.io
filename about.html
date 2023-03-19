@@ -18,7 +18,7 @@
     <header>
       <div class="container">
         <div id="branding">
-          <h1>Will Fant</h1>
+          <h1 data-value="Will Fant">Will Fant</h1>
         </div>
         <nav>
           <ul>
@@ -140,7 +140,19 @@
     </section>
     <!-- Footer -->
     <footer>
-      <h2>Follow my social media!</h2>
+      <div class="container">
+        <h1>Contact me!</h1>
+        <form action="https://formsubmit.co/williamfant2023@gmail.com"
+          method="POST">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="phone" name="number" placeholder="Phone Number" />
+          <br>
+          <br>
+          <button type="submit">Send</button>
+        </form>
+        <br>
+      </div>
       <div>
         <a href="https://www.linkedin.com/in/william-fant/"
           ><i class="fa-brands fa-linkedin"></i>
@@ -159,6 +171,37 @@
         </a>
       </div>
     </footer>
+    <script>
+      const letters =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+
+      let interval = null;
+
+      document.querySelector("h1").onmouseover = (event) => {
+        let iteration = 0;
+
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+          event.target.innerText = event.target.innerText
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return event.target.dataset.value[index];
+              }
+
+              return letters[Math.floor(Math.random() * 62)];
+            })
+            .join("");
+
+          if (iteration >= event.target.dataset.value.length) {
+            clearInterval(interval);
+          }
+
+          iteration += 1 / 2;
+        }, 25);
+      };
+    </script>
   </body>
 </html>
 
