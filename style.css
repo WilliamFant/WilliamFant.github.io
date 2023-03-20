@@ -368,10 +368,12 @@ footer {
 }
 
 footer h1{
+  color: #f7f7ff;
   font-size: 50px;
 }
 
 footer input{
+  color: #f7f7ff;
   width: 30%;
   height: 50px;
   font-size: 20px;
@@ -379,14 +381,24 @@ footer input{
 }
 
 footer button{
+  background-color: #fff;
+  color: #000;
   width: 50%;
   height: 50px;
   font-size: 20px;
   border-radius: 20px;
 }
 
+footer button:hover{
+  background-color: #fff;
+}
+
 footer a{
   color: #f7f7ff;
+}
+
+footer a:hover{
+  color: #fff;
 }
 
 /* font sizes */
@@ -407,6 +419,9 @@ p{
   font-weight: 200;
 }
 
+a{
+  color: #f7f7ff;
+}
 /* Media Queries */
 @media (max-width: 768px) {
   header > .container,
