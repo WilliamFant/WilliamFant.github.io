@@ -14,6 +14,7 @@
     <title>Will Fant</title>
   </head>
   <body>
+
     <!-- header -->
     <header>
       <div class="container">
@@ -54,37 +55,7 @@
         </p>
       </div>
     </section>
-    <!-- ABOUT -->
-    <!-- <section class="about">
-      <div class="container">
-        <article class="main-col">
-          <h1 class="page-title">About Me</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-            placeat ipsam voluptatibus adipisci, repellat earum quae officia
-            debitis ab, obcaecati delectus consequatur, cum harum dolorem
-            aspernatur incidunt tenetur suscipit laborum!
-          </p>
-          <p class="light">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            quas, perspiciatis maiores totam ullam nam dicta animi voluptatum
-            eum modi explicabo omnis inventore quod molestias fugit nulla
-            dolorem nostrum temporibus.
-          </p>
-        </article>
-        <aside class="sidebar">
-          <div class="light">
-            <h3>What We Do</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              a odio iusto, placeat error magni repellendus illo vitae quam.
-              Error laudantium adipisci a molestiae laborum tenetur sequi
-              corrupti amet doloremque!
-            </p>
-          </div>
-        </aside>
-      </div>
-    </section> -->
+
     <!-- Boxes -->
     <sections id="boxes">
       <h1>My Computer Science Background</h1>
@@ -144,31 +115,6 @@
       </div>
     </sections>
 
-    <!-- Services
-    <section class="services">
-      <div class="container">
-        <article class="main-col">
-          <h1 class="page-title">Services</h1>
-          <ul>
-            <li>
-              <h3>Website Design</h3>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-              <p>Pricing: $500-$2000</p>
-            </li>
-            <li>
-              <h3>Website Maintenance</h3>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-              <p>Pricing: $200 Monthly</p>
-            </li>
-            <li>
-              <h3>Website Hosting</h3>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-              <p>Pricing: $20 Monthly</p>
-            </li>
-          </ul>
-        </article>
-      </div>
-    </section> -->
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -220,7 +166,6 @@
               if (index < iteration) {
                 return event.target.dataset.value[index];
               }
-
               return letters[Math.floor(Math.random() * 62)];
             })
             .join("");
@@ -228,7 +173,6 @@
           if (iteration >= event.target.dataset.value.length) {
             clearInterval(interval);
           }
-
           iteration += 1 / 2;
         }, 25);
       };
