@@ -139,7 +139,7 @@ header a:hover {
   background-color: #054a91;
   border-radius: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -163,31 +163,27 @@ header a:hover {
 }
 
 i {
-  font-size: 150px;
+  font-size: 240px;
 }
 
 .fa-html5 {
+  width: 240px;
   color: #d45632;
 }
 
 .fa-css3-alt {
+  width: 240px;
   color: #2d50dc;
 }
 
 .fa-js {
+  width: 240px;
   color: #f3df50;
 }
 
-.fa-java {
-  color: 	#f89820;
-}
-
-.fa-python {
-  color:  #FFE873;
-}
-
-.fa-node{
-  color: #68A063;
+.box img{
+  height: 240px;
+  width: 240px;
 }
 
 /* About */
@@ -425,7 +421,7 @@ footer input{
 }
 
 footer button{
-  background-color: #fff;
+  background-color: #f7f7ff;
   color: #000;
   width: 50%;
   height: 50px;
@@ -439,6 +435,7 @@ footer button:hover{
 
 footer a{
   color: #f7f7ff;
+  margin: 20px;
 }
 
 footer a:hover{
@@ -466,6 +463,7 @@ p{
 a{
   color: #f7f7ff;
 }
+
 /* Media Queries */
 @media (max-width: 768px) {
   header > .container,
@@ -491,8 +489,20 @@ a{
   }
 
   #about > .container,
-  #services > .container {
+  #services > .container{
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  i{
+    width: 80vw;
+  }
+
+  footer input{
+    width: 80%;
+  }
+
+  footer button{
+    width: 80%;
   }
 }
