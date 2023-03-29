@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Will Fant's Portfolio page" />
+    <meta name="author" content="Will Fant" />
+    <script
+      src="https://kit.fontawesome.com/9a43424d0e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Will Fant</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1 data-value="Will Fant">Will Fant</h1>
+        </div>
+        <nav>
+          <ul>
+            <li id="current">
+              <a data-value="HOME" href="index.html">Home</a>
+            </li>
+            <li>
+              <a data-value="ABOUT" href="about.html">About</a>
+            </li>
+            <li>
+              <a data-value="PROJECTS" href="projects.html">Projects</a>
+            </li>
+            <li>
+              <a data-value="RESUME" href="resume.html">Resume</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Resume -->
+    <section class="mainpart">
+        <h1>Resume</h1>
+        <a href="Pics/Resume_.pdf" download>
+        <img src="Pics/resume.png">
+        </a>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <h1>Contact me!</h1>
+        <form
+          action="https://formsubmit.co/williamfant2023@gmail.com"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="phone" name="number" placeholder="Phone Number" />
+          <br />
+          <br />
+          <button type="submit">Send</button>
+        </form>
+        <br />
+      </div>
+      <div id="media">
+        <a href="https://www.linkedin.com/in/william-fant/"
+          ><i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/Willyum72513646">
+          <i class="fa-brands fa-square-twitter"></i>
+        </a>
+        <a href="https://github.com/WilliamFant">
+          <i class="fa-brands fa-square-github"></i>
+        </a>
+        <a href="https://www.facebook.com/will.fant.96/">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/willyum.fant/">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+      </div>
+    </footer>
+    <script>
+      const letters =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+
+      let interval = null;
+
+      document.querySelector("h1").onmouseover = (event) => {
+        let iteration = 0;
+
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+          event.target.innerText = event.target.innerText
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return event.target.dataset.value[index];
+              }
+              return letters[Math.floor(Math.random() * 62)];
+            })
+            .join("");
+
+          if (iteration >= event.target.dataset.value.length) {
+            clearInterval(interval);
+          }
+          iteration += 1 / 2;
+        }, 25);
+      };
+    </script>
+  </body>
+</html>

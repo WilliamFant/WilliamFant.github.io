@@ -282,7 +282,8 @@ i {
   font-weight: bold;
   color: #f7f7ff;
   margin: 50px 0 100px;
-}
+};
+
 
 .project-card {
   text-decoration: none;
@@ -462,6 +463,10 @@ p{
 
 a{
   color: #f7f7ff;
+}
+
+.mainpart img {
+  align-self: center;
 }
 
 /* Media Queries */
