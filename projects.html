@@ -71,7 +71,9 @@
                     <code>
                       <span class="selector">WebDevelopment</span>
                       <!-- <span class="punctuation">{</span> -->
-                      <i class="fa-solid fa-trophy"></i>
+                      <i id="trophy" class="fa-solid fa-trophy">
+                      </i>
+                      <br>
                       <span class="property">Award</span>
                     </code>
                 </div>
@@ -264,6 +266,7 @@
               // Compare the last highlighted tag with the user's input and update points
               if (randomTag.innerText === userInput) {
                   points = points + tags.length;
+                  highlightTagRed(randomTag)
               }
               if (userInput === '') {
                   points = points;
@@ -283,6 +286,10 @@
 
   function highlightTag(tag){
       tag.classList.add('highlight')
+  }
+
+  function highlightTagred(tag){
+      tag.classList.add('highlightred')
   }
 
   function unHighlightTag(tag) {

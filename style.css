@@ -217,6 +217,7 @@ header a:hover {
 
 .slides img {
   height: 40vh;
+  width: 40vw;
   border-radius: 10px;
   object-fit: contain;
 }
@@ -420,10 +421,9 @@ i{
   text-align: center;
   position: relative;
   width: min-content;
-
   transform-style: preserve-3d;
   /* transform: perspective(5000px) rotateY(20deg) rotateX(20deg); */
-  transform: perspective(45vw) rotateY(var(--rotateY)) rotateX(var(--rotateX));
+  transform: perspective(30vw) rotateY(var(--rotateY)) rotateX(var(--rotateX));
 }
 
 .selector {
@@ -436,6 +436,9 @@ i{
 }
 .punctuation {
   color: #f7f7ff;
+}
+#trophy{
+  color: #f0932b;
 }
 /* .property + .punctuation {
   color: var(--teal);
@@ -534,6 +537,10 @@ textarea{
 
 .tag.highlight{
   background-color: #7f96ff;
+}
+
+.tag.highlightRed{
+  background-color: #f00;
 }
 
 
