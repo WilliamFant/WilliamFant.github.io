@@ -18,21 +18,18 @@
     <header>
       <div class="container">
         <div id="branding">
-          <h1 data-value="Will Fant">Will Fant</h1>
+            <a href="index.html" id="name" data-value="Will Fant" >Will Fant</a>
         </div>
         <nav>
           <ul>
             <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="about.html">About</a>
+              <a data-value="ABOUT" href="about.html">About</a>
             </li>
             <li id="current">
-              <a href="projects.html">Projects</a>
+              <a data-value="PROJECTS" href="projects.html">Projects</a>
             </li>
             <li>
-              <a href="resume.html">Resume</a>
+              <a data-value="RESUME" href="resume.html">Resume</a>
             </li>
           </ul>
         </nav>
@@ -41,47 +38,79 @@
     
     <!-- Projects -->
         <div class="projects">
-        <h1>My projects</h1>
-        <h3>Click each one to view the website!</h3>
-        <a href="https://williamfant.github.io/metabytez/">
-        <div class="hproject-card">
-          <img src="./Pics/MetaBytez (1).png" alt="">
-            <h2>Meta Bytez</h2>
-            <p>Work in Progress! It is a website maker that uses ai to make it work it uses html css and bootstrap to make it work!</p>
+        <h1>My coding projects</h1>
+        <div id="metabytez">
+          <a href="https://williamfant.github.io/metabytez/">
+        <div class="slides">
+          <div><img src="./Pics/metabyteznobg.png" alt=""></div>
+        </div>
+        <div class="project-card">
+            <p>Work in progress! AI generated HTML, CSS and Bootstrap to make websites!</p>
+        </div>
+      </a>
+        </div>
+
+        <div id="webdesign">
+          <a href="https://williamfant.github.io/fullwebpageproject/">
+          <div class="slides">
+            <div><img src="Pics/willswebdesignd.png" alt=""></div>
+          </div>
+          <div class="project-card">
+              <p>My personal web development agency website.</p>
+            </a>
+          </div>
+        </a>
+        </div>
+
+        <div id="webaward">
+          <a href="https://williamfant.github.io/WebDevAward/">
+            <div class="slides">
+              <div class="container">
+                <div id="parent">
+                  <div class="background">
+                    <code>
+                      <span class="selector">WebDevelopment</span>
+                      <!-- <span class="punctuation">{</span> -->
+                      <i class="fa-solid fa-trophy"></i>
+                      <span class="property">Award</span>
+                    </code>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <p>3D award that reacts to the mouses position on the screen and moves to face it.</p>
+            </div>
+          </a>
+        </div>
+        </div>
+
+        <div id="guessgame" >
+          <div class="slides">
+            <div id="game">
+              <p id="points"></p>
+              <h3>Enter all of your choices divided by comma ",".</h3>
+              <textarea id="textarea" placeholder="Enter choices here..."></textarea>
+              <input type="text" id="input" placeholder="What do you think will be picked?">
+              <div id="tags">
+              </div>
+            </div>
+          </div>
+          <a href="https://williamfant.github.io/randomchoicegame/">
+          <div class="project-card">
+              <p>A game you can guess what number is selected from 0 to the number you input.</p>
+          </div>
           </a>
         </div>
 
-        <a href="https://williamfant.github.io/fullwebpageproject/">
-        <div class="hproject-card">
-          <img src="Pics/willswebdesignd.png" alt="">
-            <h2>Wills Website Design</h2>
-            <p>A professional website for a web designer for a website design website.</p>
-          </a>
-        </div>
-
-        <a href="https://williamfant.github.io/WebDevAward/">
-        <div class="hproject-card">
-          <img src="Pics/WebDevAward.png" alt="">
-            <h2>Web Development Award</h2>
-            <p>3d award that reacts to a mouses position on the screen and moves.</p>
-          </a>
-        </div>
-
-
-        <a href="https://williamfant.github.io/randomchoicegame/">
-        <div class="hproject-card">
-          <img src="Pics/Guess game.png" alt="">
-            <h2>Random Choice Game</h2>
-            <p>A game that takes the users input and randomly selects one of the answers and you can guess what it picks.</p>
-          </a>
-        </div>
-
-        <a href="https://williamfant.github.io/loremwars/">
-        <div class="hproject-card">
-          <img src="./Pics/loremwars.png" alt="">
-            <h2>Lorem Wars</h2>
-            <p>A 3d moving text that looks like the beginning of a Star Wars movie.</p>
-          </a>
+        <div id="loremwars">
+          <a href="https://williamfant.github.io/loremwars/">
+          <div class="slides">
+            <div><img src="./Pics/loremwars.png" alt=""></div>
+          </div>
+          <div class="project-card">
+              <p>3D moving text that looks like the beginning of a Star Wars movie using lorem as text.</p>
+          </div>
+        </a>
         </div>
       </div>
     </section>
@@ -124,7 +153,7 @@
 
       let interval = null;
 
-      document.querySelector("h1").onmouseover = (event) => {
+      document.querySelector("a").onmouseover = (event) => {
         let iteration = 0;
 
         clearInterval(interval);
@@ -149,5 +178,121 @@
         }, 25);
       };
     </script>
+    <script>
+      const parent = document.getElementById("parent");
+      document.addEventListener("mousemove", (e) => {
+        rotateElement(e, parent);
+      });
+      function rotateElement(event, element) {
+        //get mouse position
+        const x = event.clientX;
+        const y = event.clientY;
+      
+        //find middle
+        const middleX = window.innerWidth / 4;
+        const middleY = window.innerHeight / 2;
+      
+        //get offset fromm middle
+        const offsetX = ((x - middleX) / middleX) * 25;
+        const offsetY = ((y - middleY) / middleY) * 45;
+        //   console.log(offsetX, offsetY);
+      
+        element.style.setProperty("--rotateX", -1 * offsetY + "deg");
+        element.style.setProperty("--rotateY", offsetX + "deg");
+      }
+  </script>
+  <script>
+    const tagsEL = document.getElementById('tags')
+  const textarea = document.getElementById('textarea')
+  const pointsDisplay = document.createElement('p')
+
+  let points = 0;
+  let userInput = '';
+
+  textarea.focus()
+
+  textarea.addEventListener('keyup',(e) => {
+      createTags(e.target.value)
+      if(e.key === 'Enter'){
+          randomSelect()
+      }
+  })
+
+  input.addEventListener('keyup',(e) => {
+
+      if(e.key === 'Enter'){
+          setTimeout(() =>{
+              e.target.value = ''
+          }, 1000)
+          randomSelect()
+      }
+  })
+
+  input.addEventListener('input', (e) => {
+      userInput = e.target.value.trim();
+  })
+
+  function createTags(input){
+      const tags = input.split(',').filter(tag => tag.trim() !== '').map(tag => tag.trim())
+      tagsEL.innerHTML = ''
+      tags.forEach(tag => {
+          const tagEl = document.createElement('span')
+          tagEl.classList.add('tag')
+          tagEl.innerText = tag
+          tagsEL.appendChild(tagEl)
+      })
+  }
+
+  function randomSelect(){
+      const times = 30
+
+      const interval = setInterval(() =>{
+          const randomTag = pickRandomTag()
+
+          highlightTag(randomTag)
+          setTimeout(() => {
+              unHighlightTag(randomTag)
+          }, 100)
+      }, 100);
+
+      setTimeout(() =>{
+          clearInterval(interval)
+          setTimeout(() => {
+              const randomTag = pickRandomTag()
+              highlightTag(randomTag)
+
+              // Compare the last highlighted tag with the user's input and update points
+              if (randomTag.innerText === userInput) {
+                  points = points + tags.length;
+              }
+              if (userInput === '') {
+                  points = points;
+              }else if(randomTag.innerText !== userInput) {
+                  points = points - 1;
+              }
+              updatePointsDisplay(); // Update the points display
+
+          }, 100)
+      }, times * 100)
+  }
+
+  function pickRandomTag() {
+      const tags = document.querySelectorAll('.tag')
+      return tags[Math.floor(Math.random() * tags.length)]
+  }
+
+  function highlightTag(tag){
+      tag.classList.add('highlight')
+  }
+
+  function unHighlightTag(tag) {
+      tag.classList.remove('highlight')
+  }
+
+  function updatePointsDisplay() {
+      pointsDisplay.innerText = `${points}`;
+      document.body.appendChild(pointsDisplay);
+  }
+  </script>
   </body>
 </html>

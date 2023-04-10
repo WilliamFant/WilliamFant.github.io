@@ -15,24 +15,22 @@
   </head>
   <body>
     <!-- header -->
+    <!-- header -->
     <header>
       <div class="container">
         <div id="branding">
-          <h1 data-value="Will Fant">Will Fant</h1>
+          <a href="index.html" id="name" data-value="Will Fant" >Will Fant</a>
         </div>
         <nav>
           <ul>
-            <li>
-              <a href="index.html">Home</a>
-            </li>
             <li id="current">
-              <a href="about.html">About</a>
+              <a data-value="ABOUT" href="about.html">About</a>
             </li>
             <li>
-              <a href="projects.html">Projects</a>
+              <a data-value="PROJECTS" href="projects.html">Projects</a>
             </li>
             <li>
-              <a href="resume.html">Resume</a>
+              <a data-value="RESUME" href="resume.html">Resume</a>
             </li>
           </ul>
         </nav>
@@ -40,45 +38,34 @@
     </header>
 
     <section class="mainpart">
-      <h1>About me</h1>
-      <div class="project-card">
-        <video src="Pics/html.mp4" autoplay loop muted></video>
-        <h3>Coding</h3>
+      <h1>About me</h1>        <div class="slides">
+        <div><video src="./Pics/html.mp4" autoplay loop muted /></div>
+      </div>
+      <div 
+      class="project-card">
         <p>
-          I am a highly motivated learner with a passion for coding. I have been
-          honing my skills since the 4th grade. Since then I have been learning
-          concepts such as pseudo code, binary code, Java, Python, HTML, CSS,
-          and JavaScript throughout high school. I am currently in the
-          Commonwealth Coders course, which taught me everything I need to know
-          to be a junior web developer and create functional websites from
-          scratch. I have attended various coding classes over the years,
-          contributing to my confidence in writing efficient and effective code.
-          I am committed to pursuing future opportunities in web development and
-          continually growing in this dynamic field.
+          I have been learning how to code using Pseudo, Binary, Java, Python, HTML, CSS, and JavaScript throughout high school. I took a program called Commonwealth Coders, which taught me everything I need to know to be a junior web developer.
         </p>
       </div>
 
-      <a href="https://hurt-auto-sales.com" rel="noopener" target="_blank">
+      <a href="https://www.youtube.com/channel/UClDRIE6jsVTC4c_MtuKi1Ng" rel="noopener" target="_blank">
+        <div class="slides">
+          <div><img src="./Pics/WillyumLogo.png" /></div>
+        </div>
         <div class="project-card">
-          <img src="./Pics/HURT AUTO SALES (1).png" alt="Project 2" />
-          <h3>Sales</h3>
           <p>
-            Working at Hurt Auto Sales has been an invaluable experience for me,
-            providing me with skills that extend beyond the realm of car sales.
-            From a young age, I began assisting my grandfather with various
-            tasks, such as washing cars, which eventually led to me becoming a
-            better salesman and gaining expertise in paperwork and car
-            maintenance. Through my role as a salesman, I have learned effective
-            communication skills and gained confidence when interacting with
-            customers, influenced by my grandfather's approach of shaking hands
-            and making friends. I have also learned how to advertise through
-            different mediums, including social media, radio, newspaper, online,
-            and in-person. Additionally, I have learned that presentation is key
-            when it comes to selling products, and I have honed my skills in
-            presenting items in an informative and appealing manner that
-            resonates with customers. Overall, my experience at Hurt Auto Sales
-            has allowed me to grow both personally and professionally, and I am
-            grateful for the skills and knowledge I have gained.
+            Youtube is something that I have been in love with since I was a kid. I have recorded, edited, revised, and posted vlogs and podcasts learning each video how to improve and make the videos more entertaining.
+          </p>
+        </div>
+      </a>
+
+      <a href="https://hurt-auto-sales.com" rel="noopener" target="_blank">
+        <div class="slides">
+          <div><img src="./Pics/HURT AUTO SALES (1).png" /></div>
+        </div>
+        <div class="project-card">
+          <p>
+            I began washing cars when I was in 6th grade for my grandpa, which eventually led to me becoming a salesman in high school. I have learned effective communication skills and gained confidence when interacting with customers, ive been influenced by my grandpas's approach of shaking hands and making friends. 
           </p>
         </div>
       </a>
@@ -93,44 +80,8 @@
         <div><img src="./Pics/del sol.jpeg" /></div>
       </div>
       <div class="project-card">
-        <h3>My Personal Life</h3>
         <p>
-          My experiences in car modification and restoration and participating
-          in team sports have taught me skills that are also essential in my
-          coding career. Problem solving is a crucial aspect of coding, just as
-          it is in restoring a car or working with a team in sports. Restoring
-          Minnie's (my great aunt's) 1993 Honda Del Sol S or what she likes to
-          call it "the little red car" requires identifying problems, devising a
-          plan to address them, and executing that plan to bring the car back to
-          its original glory (with a engine swap and turbo kit). Similarly,
-          coding requires the ability to identify and solve problems by breaking
-          them down into smaller, manageable pieces and working towards a
-          solution.
-          <br />
-          <br />
-          Additionally, teamwork and communication skills are critical in both
-          sports and coding. In soccer, I learned how to work with my teammates
-          towards a common goal and communicate effectively on the field. In
-          coding, working collaboratively with a team to develop and execute a
-          project requires the same level of teamwork and communication skills.
-          Ultimately, my personal interests and experiences have helped me
-          develop skills that are not only valuable in my personal life but also
-          applicable in my coding career.
-          <br />
-          <br />
-          Aside from my professional and personal endeavors, I also enjoy
-          spending time with friends and pursuing various hobbies. One of my
-          favorite activities is going to the lake, where I can relax on a boat,
-          drive jet ski's, and wake board. I also enjoy learning to play the
-          guitar and have spent countless hours practicing this skill. My love
-          for cars extends beyond restoration and modification, and I enjoy
-          driving and exploring new places whenever I can. Additionally, I have
-          a passion for solving Rubik's cubes, which has allowed me to sharpen
-          my problem-solving abilities and analytical skills. Lastly, I am a fan
-          of Guitar Hero and enjoy challenging my friends to compete against me.
-          Through these hobbies, I have learned to manage my time effectively,
-          appreciate the value of hard work and dedication, and develop a
-          well-rounded personality.
+          Going to the lake, exploring the world, pole-vaulting, playing soccer, and working on my car are some things I enjoy doing in my free time!
         </p>
       </div>
     </section>
@@ -175,7 +126,7 @@
 
       let interval = null;
 
-      document.querySelector("h1").onmouseover = (event) => {
+      document.querySelector("a").onmouseover = (event) => {
         let iteration = 0;
 
         clearInterval(interval);

@@ -17,21 +17,18 @@
     <!-- header -->
     <header>
       <div class="container">
-        <div id="branding">
-          <h1 data-value="Will Fant">Will Fant</h1>
+        <div id="branding" id="current">
+            <a href="index.html" id="name" data-value="Will Fant" >Will Fant</a>
         </div>
         <nav>
           <ul>
-            <li id="current">
-              <a data-value="HOME" href="index.html">Home</a>
-            </li>
             <li>
               <a data-value="ABOUT" href="about.html">About</a>
             </li>
-            <li>
+            <li id="ncurrent">
               <a data-value="PROJECTS" href="projects.html">Projects</a>
             </li>
-            <li>
+            <li id="ncurrent">
               <a data-value="RESUME" href="resume.html">Resume</a>
             </li>
           </ul>
@@ -40,76 +37,70 @@
     </header>
 
     <!-- showcase -->
-    <section id="showcase">
+    <!-- <section id="showcase">
       <div class="container">
-        <h1>What's up?</h1>
+        <h1>YO!</h1>
         <p>
-          I'm Will Fant, a 17-year-old "jack of all trades". I love solving
-          problems, whether it's fixing cars, computers, or code. I'm also a
-          talented salesman and content creator. Outside of work, I enjoy
-          hanging out with friends and participating in school sports and clubs.
-          As a content creator, I love experimenting with different types of
-          content and platforms. Overall, I'm a curious and enthusiastic
-          individual who is always eager to learn and grow.
+          If you got a problem yo I'll solve it,<br>
+          Check out my stuff so I can resolve it!
         </p>
       </div>
-    </section>
+    </section> -->
+
+    <!-- Picture and description -->
+
+
+
 
     <!-- Boxes -->
     <sections id="boxes">
-      <h1>My Computer Science Background</h1>
-      <h2>Languages</h2>
-      <div class="container">
+      <div class="boxcontainer">
+        <div id="profile">
+        <img id="profilepic" src="./Pics/willfant.png" alt="Picture of Will Fant">
+        <h4>I'm the charismatic <em>"jack of all trades"</em> you have been looking for!</h4>
+      </div>
+      </div>
+      <div class="boxcontainer">
+        <h2>Languages</h2>
         <div class="box">
           <i class="fa-brands fa-js"></i>
-          <h3>JavaScript</h3>
         </div>
         <div class="box">
           <i class="fa-brands fa-html5"></i>
-          <h3>HTML</h3>
         </div>
         <div class="box">
           <i class="fa-brands fa-css3-alt"></i>
-          <h3>CSS</h3>
         </div>
         <div class="box">
           <img src="https://img.icons8.com/color/240/null/java-coffee-cup-logo--v1.png"/>
-          <h3>Java</h3>
         </div>
         <div class="box">
           <img src="https://img.icons8.com/color/240/null/python--v1.png"/>
-          <h3>Python</h3>
         </div>
         <div class="box">
           <img src="https://img.icons8.com/fluency/240/null/node-js.png"/>
-          <h3>Node</h3>
         </div>
       </div>
-      <h2>Software</h2>
-      <div class="container">
+
+      <div class="boxcontainer">
+        <h2>Software</h2>
         <div class="box">
           <img src="https://img.icons8.com/sf-regular-filled/240/null/github.png"/>
-          <h3>GitHub</h3>
         </div>
         <div class="box">
           <img src="https://img.icons8.com/color/240/null/slack-new.png"/>
-          <h3>Slack</h3>
         </div>
         <div class="box">
           <img src="https://img.icons8.com/material-sharp/240/null/mac-os.png"/>
-          <h3>Apple</h3>
         </div>
         <div class="box">
           <img src="https://img.icons8.com/color/240/null/google-logo.png"/>
-          <h3>Google</h3>
         </div>
         <div class="box">
           <img src="https://img.icons8.com/color/240/null/visual-studio-code-2019.png"/>
-          <h3>VS Code</h3>
         </div>
         <div class="box">
           <img src="./Pics/openai.png" alt="openai">
-          <h3>Chat-GPT</h3>
         </div>
       </div>
     </sections>
@@ -154,7 +145,7 @@
 
       let interval = null;
 
-      document.querySelector("h1").onmouseover = (event) => {
+      document.querySelector("a").onmouseover = (event) => {
         let iteration = 0;
 
         clearInterval(interval);

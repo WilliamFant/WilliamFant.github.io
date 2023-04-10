@@ -18,13 +18,10 @@
     <header>
       <div class="container">
         <div id="branding">
-          <h1 data-value="Will Fant">Will Fant</h1>
+          <a href="index.html" id="name" data-value="Will Fant" >Will Fant</a>
         </div>
         <nav>
           <ul>
-            <li>
-              <a data-value="HOME" href="index.html">Home</a>
-            </li>
             <li>
               <a data-value="ABOUT" href="about.html">About</a>
             </li>
@@ -86,7 +83,7 @@
 
       let interval = null;
 
-      document.querySelector("h1").onmouseover = (event) => {
+      document.querySelector("a").onmouseover = (event) => {
         let iteration = 0;
 
         clearInterval(interval);
