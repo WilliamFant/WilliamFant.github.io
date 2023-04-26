@@ -218,12 +218,14 @@ header a:hover {
 .slides img {
   height: 40vh;
   object-fit: contain;
+  margin: 30px;
   border-radius: 30px;
 }
 
 .slides video {
   height: 40vh;
   object-fit: contain;
+  margin: 30px;
   border-radius: 30px;
 }
 
